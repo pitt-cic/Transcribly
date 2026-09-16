@@ -1,0 +1,70 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  /* Colors from Figma design */
+  --color-primary-teal: #11BCAB;
+  --color-bg-dark: #151517;
+  --color-panel-dark: #1E1E21;
+  --color-border-gray: #3E3E46;
+  --color-text-primary: #F1F1F4;
+  --color-text-secondary: #A0A0AA;
+  --color-text-muted: #737379;
+  --color-accent-red: #EF5555;
+
+  /* Speaker colors */
+  --color-speaker-orange: #F27F37;
+  --color-speaker-blue: #5AB9FC;
+  --color-speaker-green: #61EBA5;
+  --color-speaker-pink: #F066B8;
+
+  /* Font family */
+  --font-family-sans: 'Inter', sans-serif;
+
+  /* Border radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 10px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-dark text-text-primary font-sans antialiased;
+  }
+
+  #root {
+    @apply w-full min-h-screen;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    @apply w-2 h-2;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-bg-dark;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-border-gray rounded;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-text-muted;
+  }
+}
+
+@layer utilities {
+  .pulse-animation {
+    animation: pulse 2s infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+}
