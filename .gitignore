@@ -12,3 +12,9 @@
 /frontend/package-lock.json
 /frontend/CONVERSATION_HISTORY.md
 test/
+
+# Landing page
+/page/transcribly-landing/node_modules/
+/page/transcribly-landing/dist/
+/page/transcribly-landing/tsconfig.app.tsbuildinfo
+/page/transcribly-landing/tsconfig.node.tsbuildinfo
